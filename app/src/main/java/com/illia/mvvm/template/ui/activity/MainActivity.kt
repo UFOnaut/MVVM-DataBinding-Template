@@ -1,19 +1,21 @@
-package com.illia.mvvm.template.ui
+package com.illia.mvvm.template.ui.activity
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
-import com.illia.template.R
+import androidx.lifecycle.MutableLiveData
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.snackbar.Snackbar
+import com.illia.mvvm.template.model.dto.GithubItem
+import com.illia.mvvm.template.ui.adapter.GithubAdapter
 import com.illia.mvvm.template.ui.viewmodel.TempViewModel
+import com.illia.template.R
 import com.illia.template.databinding.ActivityMainBinding
-
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
+
 
 class MainActivity : BaseActivity() {
 
@@ -30,6 +32,8 @@ class MainActivity : BaseActivity() {
         )
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
+//        binding.rvMain.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
         viewModel.getRepositories()
 
         setSupportActionBar(toolbar)

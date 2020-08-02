@@ -1,4 +1,4 @@
-package com.illia.myapplication
+package com.illia.template
 
 import org.junit.Test
 

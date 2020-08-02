@@ -1,4 +1,4 @@
-package com.illia.mvvm.template.ui
+package com.illia.mvvm.template.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
