@@ -35,6 +35,7 @@ class MainActivity : BaseActivity() {
 //        binding.rvMain.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         viewModel.getRepositories()
+        
 
         setSupportActionBar(toolbar)
     }
