@@ -37,11 +37,6 @@ class MainActivity : BaseActivity() {
         viewModel.getRepositories()
 
         setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, value.toString(), Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
